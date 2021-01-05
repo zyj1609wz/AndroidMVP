@@ -19,13 +19,11 @@ class MainActivity : BaseMvpActivity<MainPresenter>(), MainContract.IView {
 
     override fun initView() {
         tv = findViewById(R.id.tv)
-
-        //请求网络
-        getPresenter().fetchData()
     }
 
     override fun initData() {
-
+        //请求网络
+        getPresenter().fetchData()
     }
 
     override fun onFetchSuccess(list: List<GithubRepo>) {
