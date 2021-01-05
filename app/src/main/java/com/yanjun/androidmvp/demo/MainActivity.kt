@@ -37,5 +37,9 @@ class MainActivity : BaseMvpActivity<MainPresenter>(), MainContract.IView {
         tv?.text = "failed"
     }
 
+    override fun showLoading() {
+        super.showLoading()
+        tv?.text = "loading...."
+    }
 
 }

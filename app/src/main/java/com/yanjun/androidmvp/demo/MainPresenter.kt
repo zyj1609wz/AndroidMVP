@@ -18,6 +18,8 @@ class MainPresenter : BaseMvpPresenter<MainActivity, MainModel>(), MainContract.
     }
 
     override fun fetchData() {
+        getView().showLoading()
+
         getModel().fetchData()
             .enqueue(object : Callback<List<GithubRepo>> {
                 override fun onResponse(
