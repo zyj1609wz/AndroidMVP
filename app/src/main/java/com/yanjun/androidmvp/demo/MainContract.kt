@@ -1,4 +1,5 @@
 package com.yanjun.androidmvp.demo
+import com.yanjun.androidmvp.demo.util.GithubRepo
 import com.yanjun.androidmvp.mvp.contract.IViewContract
 
 /**
@@ -8,12 +9,11 @@ import com.yanjun.androidmvp.mvp.contract.IViewContract
  */
 interface MainContract {
 
-    interface IView: IViewContract {
+    interface IView : IViewContract {
 
-        fun onFetchSuccess(list:List<GithubRepo>)
+        fun onFetchSuccess(list: List<GithubRepo>)
 
         fun onFetchFailed()
-
     }
 
     interface IPresenter {

@@ -1,4 +1,4 @@
-package com.yanjun.androidmvp.demo.httputil
+package com.yanjun.androidmvp.demo.util
 
 import com.google.gson.Gson
 import retrofit2.Retrofit

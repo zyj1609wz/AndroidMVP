@@ -1,4 +1,4 @@
-package com.yanjun.androidmvp.demo
+package com.yanjun.androidmvp.demo.util
 
 /**
  * @author yanjun.zhao

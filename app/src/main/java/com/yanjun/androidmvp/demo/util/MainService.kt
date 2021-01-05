@@ -1,5 +1,6 @@
-package com.yanjun.androidmvp.demo
+package com.yanjun.androidmvp.demo.util
 
+import com.yanjun.androidmvp.demo.util.GithubRepo
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

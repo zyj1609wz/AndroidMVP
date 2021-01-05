@@ -2,6 +2,7 @@ package com.yanjun.androidmvp.demo
 
 import android.widget.TextView
 import com.yanjun.androidmvp.R
+import com.yanjun.androidmvp.demo.util.GithubRepo
 import com.yanjun.androidmvp.mvp.BaseMvpActivity
 
 class MainActivity : BaseMvpActivity<MainPresenter>(), MainContract.IView {

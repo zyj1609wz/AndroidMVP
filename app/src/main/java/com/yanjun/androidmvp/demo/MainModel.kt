@@ -1,6 +1,8 @@
 package com.yanjun.androidmvp.demo
 
-import com.yanjun.androidmvp.demo.httputil.RetrofitHolder
+import com.yanjun.androidmvp.demo.util.GithubRepo
+import com.yanjun.androidmvp.demo.util.MainService
+import com.yanjun.androidmvp.demo.util.RetrofitHolder
 import com.yanjun.androidmvp.mvp.BaseMvpModel
 import retrofit2.Call
 

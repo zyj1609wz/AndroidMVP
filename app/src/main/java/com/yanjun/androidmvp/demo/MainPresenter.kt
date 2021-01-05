@@ -1,5 +1,6 @@
 package com.yanjun.androidmvp.demo
 
+import com.yanjun.androidmvp.demo.util.GithubRepo
 import com.yanjun.androidmvp.mvp.BaseMvpPresenter
 import retrofit2.Call
 import retrofit2.Callback
@@ -10,7 +11,7 @@ import retrofit2.Response
  * @time 2021/1/5 2:41 PM
  * @desc
  */
-class MainPresenter : BaseMvpPresenter<MainContract.IView, MainModel>(), MainContract.IPresenter {
+class MainPresenter : BaseMvpPresenter<MainActivity, MainModel>(), MainContract.IPresenter {
 
     override fun registerModel(): Class<MainModel> {
         return MainModel::class.java
