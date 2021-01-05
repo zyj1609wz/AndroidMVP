@@ -9,4 +9,4 @@ Android MVP架构demo
 
   - main 主要提现 android mvp 架构思想, 网络请求使用 retrofit
   
-  - mvp-rxjva3 主要是提现 mvp 架构 + rxjava3 混合使用
+  - mvp-rxjva3 主要是体现 mvp 架构 + rxjava3 混合使用
