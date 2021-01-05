@@ -1,10 +1,7 @@
 package com.yanjun.androidmvp.demo
 
-import com.yanjun.androidmvp.demo.util.GithubRepo
+import com.yanjun.androidmvp.demo.util.RxUtils
 import com.yanjun.androidmvp.mvp.BaseMvpPresenter
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 /**
  * @author yanjun.zhao
@@ -21,20 +18,11 @@ class MainPresenter : BaseMvpPresenter<MainActivity, MainModel>(), MainContract.
         getView().showLoading()
 
         getModel().fetchData()
-            .enqueue(object : Callback<List<GithubRepo>> {
-                override fun onResponse(
-                    call: Call<List<GithubRepo>>,
-                    response: Response<List<GithubRepo>>
-                ) {
-                    response.body()?.let {
-                        getView().onFetchSuccess(it)
-                    }
-
-                }
-
-                override fun onFailure(call: Call<List<GithubRepo>>, t: Throwable) {
-                    getView().onFetchFailed()
-                }
-            })
+            .compose(RxUtils.singleToMain())
+            .subscribe({
+                getView().onFetchSuccess(it)
+            }) {
+                getView().onFetchFailed()
+            }
     }
 }

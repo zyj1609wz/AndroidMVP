@@ -1,7 +1,7 @@
 package com.yanjun.androidmvp.demo
 import com.yanjun.androidmvp.demo.util.GithubRepo
 import com.yanjun.androidmvp.mvp.contract.IViewContract
-import retrofit2.Call
+import io.reactivex.rxjava3.core.Single
 
 /**
  * @author yanjun.zhao
@@ -22,6 +22,6 @@ interface MainContract {
     }
 
     interface IModel{
-        fun fetchData(): Call<List<GithubRepo>>
+        fun fetchData(): Single<List<GithubRepo>>
     }
 }

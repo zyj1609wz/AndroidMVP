@@ -1,7 +1,6 @@
 package com.yanjun.androidmvp.demo.util
 
-import com.yanjun.androidmvp.demo.util.GithubRepo
-import retrofit2.Call
+import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -12,5 +11,5 @@ import retrofit2.http.Path
  */
 interface MainService {
     @GET("users/{user}/repos")
-    fun listRepos(@Path("user") user: String): Call<List<GithubRepo>>
+    fun listRepos(@Path("user") user: String): Single<List<GithubRepo>>
 }
