@@ -1,6 +1,7 @@
 package com.yanjun.androidmvp.demo
 import com.yanjun.androidmvp.demo.util.GithubRepo
 import com.yanjun.androidmvp.mvp.contract.IViewContract
+import retrofit2.Call
 
 /**
  * @author yanjun.zhao
@@ -18,5 +19,9 @@ interface MainContract {
 
     interface IPresenter {
         fun fetchData()
+    }
+
+    interface IModel{
+        fun fetchData(): Call<List<GithubRepo>>
     }
 }

@@ -11,11 +11,11 @@ import retrofit2.Call
  * @time 2021/1/5 3:08 PM
  * @desc
  */
-class MainModel : BaseMvpModel() {
+class MainModel : BaseMvpModel(), MainContract.IModel {
 
     private val service: MainService = RetrofitHolder.mRetrofit.create(MainService::class.java)
 
-    fun fetchData(): Call<List<GithubRepo>> {
+    override fun fetchData(): Call<List<GithubRepo>> {
         return service.listRepos("zyj1609wz")
     }
 }
