@@ -2,7 +2,6 @@ package com.yanjun.androidmvp.demo.util
 
 import com.google.gson.Gson
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 /**
@@ -18,7 +17,6 @@ object RetrofitHolder {
         mRetrofit = Retrofit.Builder()
             .baseUrl("https://api.github.com/")
             .addConverterFactory(GsonConverterFactory.create(Gson()))
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     }
 
