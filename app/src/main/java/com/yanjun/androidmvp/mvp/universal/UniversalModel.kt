@@ -7,6 +7,4 @@ import com.yanjun.androidmvp.mvp.BaseMvpModel
  * @time 2021/1/5 3:08 PM
  * @desc 通用Model
  */
-class UniversalModel : BaseMvpModel(), UniversalContract.IModel {
-
-}
+class UniversalModel : BaseMvpModel(), UniversalContract.IModel
